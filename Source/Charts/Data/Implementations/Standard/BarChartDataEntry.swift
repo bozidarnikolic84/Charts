@@ -26,6 +26,10 @@ open class BarChartDataEntry: ChartDataEntry
     private var _positiveSum: Double = 0.0
   
     public var additionalInfo: Double = 0.0
+  
+    public var additionalInfoTotal: Double = 0.0
+
+    public var additionalInfoBillable: Double = 0.0
     
     public required init()
     {
