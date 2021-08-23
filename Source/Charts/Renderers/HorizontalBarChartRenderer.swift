@@ -398,15 +398,22 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                             posOffset = -posOffset - valueTextWidth
                             negOffset = -negOffset - valueTextWidth
                         }
+                      
+                      var newY = y
+                      if valueText.contains("\n") {
+                        newY = y + yOffset*2
+                      }else{
+                        newY = y + yOffset
+                      }
                         
                         if dataSet.isDrawValuesEnabled
                         {
                             drawValue(
                                 context: context,
                                 value: valueText,
-                                xPos: (rect.origin.x + rect.size.width)
+                                xPos: (rect.origin.x)
                                     + (val >= 0.0 ? posOffset : negOffset),
-                                yPos: y + yOffset,
+                                yPos: newY,
                                 font: valueFont,
                                 align: textAlign,
                                 color: dataSet.valueTextColorAt(j),

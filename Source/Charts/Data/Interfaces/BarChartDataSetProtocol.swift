@@ -11,6 +11,7 @@
 
 import Foundation
 import CoreGraphics
+import UIKit
 
 @objc
 public protocol BarChartDataSetProtocol: BarLineScatterCandleBubbleChartDataSetProtocol
@@ -39,4 +40,7 @@ public protocol BarChartDataSetProtocol: BarLineScatterCandleBubbleChartDataSetP
     
     /// array of labels used to describe the different values of the stacked bars
     var stackLabels: [String] { get set }
+  
+    /// Color for text which is above the bar
+    var textBarLabelColor: UIColor {get set}
 }

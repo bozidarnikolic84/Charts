@@ -43,6 +43,8 @@ open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, BarChartData
     
     /// the overall entry count, including counting each stack-value individually
     private var _entryCountStacks = 0
+  
+    open var textBarLabelColor: UIColor = UIColor.black
     
     /// Calculates the total number of entries this DataSet represents, including
     /// stacks. All values belonging to a stack are calculated separately.
