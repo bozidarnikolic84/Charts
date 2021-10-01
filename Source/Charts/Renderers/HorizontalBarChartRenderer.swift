@@ -403,8 +403,9 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                         }
                       var newY = y
                       if valueText.contains("\n") {
-                        newY = y + yOffset*2
+                        newY = rect.origin.y + (rect.size.height / 2.0) - 10
                       }else{
+                        newY = rect.origin.y + (rect.size.height / 2.0) - 5
                       }
                       
                         if dataSet.isDrawValuesEnabled
